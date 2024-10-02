@@ -7,20 +7,20 @@ const SingleLatestPost = ({suggestedPosts,title,date,featuredMedia,isLoading,slu
     const [imgUrls, setImgUrls] = useState('');
     const baseUrl=process.env.REACT_APP_BASE_URL;
     const [newurrentPost,setNewurrentPost]=useState([])
-    useEffect(() => {
-        const fetchData= async ()=>{
-             try {
-                const currentPost=await axios.get(baseUrl+'/posts?slug='+slug);
-            const response = await axios.get(baseUrl+'/media/'+featuredMedia);
-           setImgUrls(response.data.media_details.sizes.full.source_url)
-           setNewurrentPost(currentPost.data)
-           } catch (error) {
-               console.log(error)
-           }
-        }
+//     useEffect(() => {
+//         const fetchData= async ()=>{
+//              try {
+//                 const currentPost=await axios.get(baseUrl+'/posts?slug='+slug);
+//             const response = await axios.get(baseUrl+'/media/'+featuredMedia);
+//            setImgUrls(response.data.media_details.sizes.full.source_url)
+//            setNewurrentPost(currentPost.data)
+//            } catch (error) {
+//                console.log(error)
+//            }
+//         }
 
-        fetchData()   
-  }, [isLoading,suggestedPosts])
+//         fetchData()   
+//   }, [isLoading,suggestedPosts])
   const navigate=useNavigate()
     return (
         <div className="postItem  flex gap-[15px] items-center">

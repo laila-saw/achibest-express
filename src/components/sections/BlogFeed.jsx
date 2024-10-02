@@ -34,54 +34,54 @@ const BlogFeed = () => {
     website: localStorage.getItem("website") ===null ? "" : localStorage.getItem("website"),
     comment: "",
   })
-  useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        const wpCurrentPost = await axios.get(baseUrl + '/posts?slug=' + postId.postname);
-        console.log("wpCurrentPost",wpCurrentPost.data.length)
-        if(wpCurrentPost.data.length!==0){
-          setCurrentPost(wpCurrentPost.data)
-        const wpLatestPosts = await axios.get(baseUrl + '/posts');
-        setLatestPosts(wpLatestPosts.data)
-        setIsLoading(true)
-        let postPagination = []
-        for (let i = 0; i < latestPosts.length; i++) {
-          postPagination.push({ pos: i, latestPosts: latestPosts[i] })
-        }
-        for (let i = 0; i < postPagination.length; i++) {
-          if (postPagination[i].latestPosts.id === currentpost[0].id) {
-            setCurrentPosition(i)
-          }
-        }
-        setLatestPosts2(postPagination)
-        const media = await axios.get(baseUrl + '/media/' + currentpost[0].featured_media);
-        setUrlImg(media.data.media_details.sizes.full.source_url)
-        const wpComments = await axios.get(baseUrl + '/comments?post=' + currentpost[0].id);
-        setComments(wpComments.data)
-        const wpCategories = await axios.get(baseUrl + '/categories');
-        let array = [];
-        for (let i = 0; i < currentpost[0].tags.length; i++) {
-          const wpTags = await axios.get(baseUrl + '/tags/' + currentpost[0].tags[i]);
-          array.push(wpTags.data.name)
-        }
-        setTags(array)
-        setCategories(wpCategories.data)
-        }
-        else{
-          navigate("*")
-        }
+  // useEffect(() => {
+  //   const fetchPost = async () => {
+  //     try {
+  //       const wpCurrentPost = await axios.get(baseUrl + '/posts?slug=' + postId.postname);
+  //       console.log("wpCurrentPost",wpCurrentPost.data.length)
+  //       if(wpCurrentPost.data.length!==0){
+  //         setCurrentPost(wpCurrentPost.data)
+  //       const wpLatestPosts = await axios.get(baseUrl + '/posts');
+  //       setLatestPosts(wpLatestPosts.data)
+  //       setIsLoading(true)
+  //       let postPagination = []
+  //       for (let i = 0; i < latestPosts.length; i++) {
+  //         postPagination.push({ pos: i, latestPosts: latestPosts[i] })
+  //       }
+  //       for (let i = 0; i < postPagination.length; i++) {
+  //         if (postPagination[i].latestPosts.id === currentpost[0].id) {
+  //           setCurrentPosition(i)
+  //         }
+  //       }
+  //       setLatestPosts2(postPagination)
+  //       const media = await axios.get(baseUrl + '/media/' + currentpost[0].featured_media);
+  //       setUrlImg(media.data.media_details.sizes.full.source_url)
+  //       const wpComments = await axios.get(baseUrl + '/comments?post=' + currentpost[0].id);
+  //       setComments(wpComments.data)
+  //       const wpCategories = await axios.get(baseUrl + '/categories');
+  //       let array = [];
+  //       for (let i = 0; i < currentpost[0].tags.length; i++) {
+  //         const wpTags = await axios.get(baseUrl + '/tags/' + currentpost[0].tags[i]);
+  //         array.push(wpTags.data.name)
+  //       }
+  //       setTags(array)
+  //       setCategories(wpCategories.data)
+  //       }
+  //       else{
+  //         navigate("*")
+  //       }
 
 
-      } catch (error) {
-        console.log("error fetch post",error)
-        if(error==="TypeError: Cannot read properties of undefined (reading 'featured_media')"){
-          console.log("yes")
-        }
-      }
-    }
-    fetchPost();
+  //     } catch (error) {
+  //       console.log("error fetch post",error)
+  //       if(error==="TypeError: Cannot read properties of undefined (reading 'featured_media')"){
+  //         console.log("yes")
+  //       }
+  //     }
+  //   }
+  //   fetchPost();
 
-  }, [postId.postname, isLoading, currentPosition])
+  // }, [postId.postname, isLoading, currentPosition])
   const navigate = useNavigate();
   // validate comment form 
   const [focussedUsername, setFocussedUsername] = useState(false)

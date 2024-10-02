@@ -21,25 +21,25 @@ const BlogPosts = () => {
     
   const [noResults,setNoResult]=useState(false)
     const baseUrl=process.env.REACT_APP_BASE_URL;
-    useEffect(() => {
-         const fetchPosts= async ()=> {
-            try {
-             const response = await axios.get(baseUrl+'/posts');
-             if(categoryfromurl!==null){
-                const wpCategory = await axios.get(baseUrl+'/categories?slug='+categoryfromurl);
-             setCurrentCategory(wpCategory.data[0].id)
-             }
-             const wpPosts = response.data;
-            setPosts(wpPosts);
-            setIsLoading(true) 
-            } catch (error) {
-                console.log(error)
-            }
+//     useEffect(() => {
+//          const fetchPosts= async ()=> {
+//             try {
+//              const response = await axios.get(baseUrl+'/posts');
+//              if(categoryfromurl!==null){
+//                 const wpCategory = await axios.get(baseUrl+'/categories?slug='+categoryfromurl);
+//              setCurrentCategory(wpCategory.data[0].id)
+//              }
+//              const wpPosts = response.data;
+//             setPosts(wpPosts);
+//             setIsLoading(true) 
+//             } catch (error) {
+//                 console.log(error)
+//             }
             
-        }
+//         }
     
-        fetchPosts();
-   }, [])
+//         fetchPosts();
+//    }, [])
   const postsPerPage = 6;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;

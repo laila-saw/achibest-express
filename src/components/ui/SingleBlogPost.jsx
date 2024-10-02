@@ -15,32 +15,32 @@ const SingleBlogPost = ({suggestedPosts,currentPage, feutured, category, date, a
         setrerenderComponent(1)
         setIsLoading(true)
     }, 100);
-    useEffect(() => {
-        const fetchData= async ()=>{
-             try {
-            const response = await axios.get(baseUrl+'/media/'+feutured);
-            for (let i = 0; i < category.length; i++) {
-                let res=await axios.get(baseUrl+'/categories/'+category[i])
-                let devidor=''
-                if(i === category.length-1){
-                    devidor=""
-                }else{
-                    devidor=" | " 
-                }
-                array.push(res.data.name+devidor)
-            }
-            setWpCategory(array)
-            // const response2 = await axios.get(baseUrl+'/categories/'+category)
-            const response3 = await axios.get(baseUrl+'/users/'+author);
-           setImgUrls(response.data.media_details.sizes.full.source_url)
-        //    setWpCategory(response2.data.name)
-           setWpauthor(response3.data.name)
-           } catch (error) {
-               console.log(error)
-           }
-        }
-        fetchData()   
-  }, [currentPage,rerenderComponent,suggestedPosts])
+//     useEffect(() => {
+//         const fetchData= async ()=>{
+//              try {
+//             const response = await axios.get(baseUrl+'/media/'+feutured);
+//             for (let i = 0; i < category.length; i++) {
+//                 let res=await axios.get(baseUrl+'/categories/'+category[i])
+//                 let devidor=''
+//                 if(i === category.length-1){
+//                     devidor=""
+//                 }else{
+//                     devidor=" | " 
+//                 }
+//                 array.push(res.data.name+devidor)
+//             }
+//             setWpCategory(array)
+//             // const response2 = await axios.get(baseUrl+'/categories/'+category)
+//             const response3 = await axios.get(baseUrl+'/users/'+author);
+//            setImgUrls(response.data.media_details.sizes.full.source_url)
+//         //    setWpCategory(response2.data.name)
+//            setWpauthor(response3.data.name)
+//            } catch (error) {
+//                console.log(error)
+//            }
+//         }
+//         fetchData()   
+//   }, [currentPage,rerenderComponent,suggestedPosts])
     return (
         <div className="blogPostItem w-ful sm:w-[calc(100%/2-16px)] lg:w-[calc(100%/3-24px)] overflow-hidden bg-lightGray rounded-lg  pb-7 flex flex-col gap-2 lg:gap-4">
             <div>
