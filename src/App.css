@@ -1,0 +1,720 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+   --green: #008c28;
+   --red: #e90000;
+   --orange : #ffb700;
+   --firstDarkColor :#2c322e;
+   --secondDarkColor :#383e3a;
+   --thirdDarkColor :#414743;
+}
+
+/* general  */
+::selection{
+    color: white;
+    background-color: var(--orange);
+}
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--orange);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.167);
+    border-radius: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.sectionTitle{
+    font-weight: 800;
+    font-size: 18px;
+    /* margin-bottom: 40px; */
+    text-transform: uppercase;
+}
+.boxTitle{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.boxTitle-2{
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+/* .boxText p{
+margin-bottom: 15px;
+} */
+.boxImg{
+    display: flex;align-items: center;
+}
+/* .stepItem .boxText,
+.stepItem .boxImg{
+    height: calc(100% / 2);
+} */
+.sectionContainer .text{
+    font-weight: 400;
+}
+.alertError {
+    color: #e70909;
+    /* margin-top: 5px; */
+    font-size: 14px;
+    transform: translateX(20px);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    transition: 0.3s;
+    padding-left: 5px;
+  }
+  
+  .selectReservation.invalid .selectTop,
+  .reservationFields textarea:invalid[focused="true"],
+  .inputFieldItem:invalid[focused="true"] {
+    border-color: #e70909;
+  }
+  .reservationFields .selectTop + .alertError,
+  .reservationFields textarea:invalid[focused="true"] + .alertError,
+  .inputFieldItem:invalid[focused="true"] + .alertError {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+  .entry-content p{
+    opacity: .8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .entry-content h3{
+    color: var(--green);
+    font-size: 19px;
+  }
+  .entry-content a{
+    color: orange;
+    font-weight: 500;
+  }
+  textarea:focus,
+  input:focus{
+    outline: none;
+  }
+  #Search::-ms-clear{
+    margin-right:20px;
+ }
+/* !general  */
+/* header */
+.header{
+    width: 100%;
+    position: absolute;
+    color: white;
+    width: calc(100% - 75px);
+    left: 75px;
+}
+
+/* .actionBtn{
+    background: green;
+} */
+.headerWrapper{
+    width: 100%;
+    padding: 24px 0;
+    padding-left: 76px;
+    padding-right: 20px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+}
+.navItem{
+    /* margin-right: 30px; */
+    text-transform: capitalize;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* !header */
+/* sidebar  */
+.sidebar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f3f0f0;
+    width: 75px;
+    height: calc(100vh + 76px);
+    
+}
+.notHomePage svg{
+    fill:  white;
+}
+.sidebarWrapp{
+    padding: 30px 10px 100px ;
+    height: inherit;
+    width: inherit;
+    align-items: center;
+}
+.menu{
+    transition: all .5s ease;
+}
+.servicesList .serviceItem{
+    box-shadow: -3px 3px 3px 0px #0000002e;
+}
+.serviceItem svg{
+    width: 60px;
+    height: 60px;
+    transition: all .5s;
+}
+.serviceItem:hover svg{
+fill: white;
+}
+.socialMediaIcons .socialMediaIcon svg{
+width: 20px;
+height: 20px;
+transition: all .5s;
+}
+.socialMediaIcons .socialMediaIcon:hover svg{
+    fill: var(--green);
+}
+.socialMediaIcons.socialMediaIconsMb .socialMediaIcon svg{
+    width: 30px;
+    height: 30px;
+}
+/* !sidebar */
+/* banner */
+/* .bannerWrapper{
+    background-image: url(../public/assets/achibestBg.png);
+    background-size: cover;
+} */
+.icon_menu {
+    width: 25px;
+    height: 16px;
+    background: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    /* display: none; */
+  }
+.icon_menu .icon_side::before,
+.icon_menu .icon_side::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  
+  transition: transform 0.3s;
+  background: red;
+  /* margin: initial; */
+}
+.icon_menu .icon_side::before{
+    transform: rotate(122deg);
+}
+.icon_menu .icon_side::after{
+    transform: rotate(0deg);
+}
+.videoControllerIcon{
+    width: 70px;
+    height: 70px;
+    /* background: red; */
+    padding: 25px;
+    border-radius: 50%;
+    transition: all .5s;
+}
+.videoControllerBtn{
+    border: 2px solid var(--orange);
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+}
+.videoControllerBtn:hover .videoControllerIcon{
+    background-color: var(--green);
+}
+.videoControllerBtn:hover {
+    border-color: var(--green);
+}
+.popupbackground video{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    object-fit: cover;
+}
+.bannerTitle::before{
+content: "";
+    width: 15px;
+    height: 15px;
+    background: white;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* !banner */
+
+.newsContent .carousel .slide{
+    text-align: left;
+}
+/* !sidebarNews */
+/* about homepage */
+.desc{
+    opacity: .8;
+}
+.desc .keyWords{
+    font-weight: 500;
+    font-style: italic;
+    opacity: 1;
+}
+.realisationItem svg{
+    fill: var(--orange);
+    width: 60px;
+    height: 60px;
+}
+/* !about homepage */
+.menuOpened ~ .main .sidebarNews{
+    display: none;
+}
+/* productsHomePage */
+.postItem .imgContainer img,
+.postFeaturedMediaCon img,
+.storageItem .storageImgCon img,
+.blogPostItem .blogPostImgCon img,
+.postInstagramList .postInstaItem .postInstaImg,
+.productItem .boxImg img{
+    transition: all .5s;
+}
+.postItem .imgContainer:hover img,
+.postFeaturedMediaCon:hover img,
+.storageItem:hover .storageImgCon img,
+.blogPostItem:hover .blogPostImgCon img,
+.postInstagramList .postInstaItem:hover .postInstaImg,
+.productItem .boxImg:hover img{
+transform: scale(1.2);
+}
+/* !productsHomePage */
+/* about aboutpage */
+.storyTimeLine .singleDate::before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    transform: translateY(calc(-40px - 15px));
+    
+}
+/* !about aboutpage */
+/* realisation aboutPage */
+.realisationBox .triangle{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    bottom: -60px;
+    right: 0;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    transform: rotate(-90deg);
+
+}
+.flex-col-reverse .realisationBox .triangle{
+    bottom: 99%;
+    transform: rotate(0deg);
+}
+.realisationBox svg{
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px;
+    fill: white;
+} 
+.realisationImg img{
+    transition: all .5s;
+}
+.realisationImg:hover img{
+    transform: scale(1.2);
+}
+/* !realisation aboutPage */
+/* productPage */
+.productPage .productItem{
+    transition: all 0.5s;
+    }
+.productPage .productItem:hover{
+box-shadow: 0 0 10px 0px #0000002e;
+}
+/* !productPage */
+
+/* contact  */
+.selectBox .selectTop.opened svg polyline,
+.selectBox .selectTop:hover svg polyline{
+     stroke: orange;
+}
+
+.selectBox .selectTop svg {
+    transition: all 0.5s;
+}
+.selectBox .selectTop.opened svg {
+    stroke: orange;
+    transform: rotate(180deg);
+}
+ 
+.selectBox .selectBottom{
+    box-shadow: 0 0 10px 0px #0000002e;
+    background-color: white;
+    margin-top: 5px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+    transform: translateY(15px);
+    height: 185px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.selectReservation  .selectBottom{
+    height: max-content;
+    border: 1px solid ;
+    border-radius: 5px;
+}
+.selectBox .selectBottom::-webkit-scrollbar{
+    width: 5px;
+}
+.selectBox .selectBottom::-webkit-scrollbar-track{
+   box-shadow: inset 0 0 6px     rgba(0,0,0,0.3); 
+    border-radius: 20px;
+}
+.selectBox .selectBottom::-webkit-scrollbar-thumb{
+    background-color: var(--orange);
+    border-radius: 20px;
+}
+.selectBox .selectBottom.opened{
+transform: translateY(0);
+opacity: 1;
+    pointer-events: all;
+}
+/* contact  */
+
+/* reservation page  */
+.selectReservation .selectTop.opened,
+.inputFieldItem:focus{
+    outline: none;
+border: 1px solid var(--orange);
+box-shadow: 0px 2px 0px var(--orange); 
+}
+.selectReservation .selectTop{
+    color: gray;
+}
+.selectReservation .selectTop.opened svg polyline,
+.selectReservation .selectTop:hover svg polyline{
+     stroke: black;
+}
+.react-calendar{
+    width: 100% !important;
+    background-color: #f7f7f7 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+}
+.react-calendar__navigation button{
+min-width: 35px !important;
+}
+.react-calendar__navigation__arrow{
+    font-size: 26px !important;
+    color: gray !important;
+    background-color: white !important;
+    width: 35px !important;
+    height: 35px !important;
+    transition: all 0.5s !important;
+}
+.react-calendar__navigation__arrow:hover{
+    background:var(--green) !important;
+    color: white !important;
+}
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button{
+    display: none !important;
+}
+.react-calendar__navigation{
+    align-items: center !important
+}
+.react-calendar__navigation__label{
+    line-height: 35px !important;
+    font-weight: 500 !important;
+}
+abbr:where([title]){
+    text-decoration: none !important;
+    opacity: 0.4 !important;
+    font-weight: 600 !important;
+}
+
+.react-calendar__tile--now{
+color: black !important;
+}
+.react-calendar__month-view__days__day--weekend{
+    color: black !important;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575 !important;
+}
+/* react-calendar__tile react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day */
+.react-calendar__tile{
+    font-size: 13px !important;
+    line-height: 13px !important;
+}
+.react-calendar__tile:hover,
+.react-calendar__tile:focus,
+.react-calendar__tile--active{
+    color: white !important;
+    background: var(--green) !important ;
+    border-radius: 8px !important;
+}
+
+/* !reservation page  */
+
+
+/* carousel  */
+.carousel.carousel-slider{
+    overflow: visible !important;
+}
+.carousel .control-next.control-arrow:before{
+    border-left-color: var(--orange);
+}
+.control-arrow{
+    top: 100% !important;
+    transform: translateY(20px);
+    opacity: 0 !important;
+}
+.control-arrow.control-prev{
+/* right: 0; */
+left: calc(50% - 60px) !important;
+opacity: 0 !important;
+}
+.control-arrow.control-next{
+    left: calc(50% + 11px) !important;
+    opacity: 0;
+}
+.carousel.carousel-slider .control-arrow {
+    background: rgba(0,0,0,0.2);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+/* single blog post  */
+.blogRightBox{
+    background-color: white;
+    border-radius: 8px;
+    /* padding: 30px; */
+}
+.blogRightBoxTitle{
+    cursor: default;
+    font-size: 18px;
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 1.5rem/* 24px */;
+    line-height: 2rem/* 32px */;
+    font-weight: 500;
+}
+.blogRightBoxTitle::before,
+.blogRightBoxTitle::after{
+    background: #d3d3d3;
+    bottom: -10px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.blogRightBoxTitle::after{
+    background-color: orange;
+    width: 50%;
+}
+
+.tagsList .tagItem{
+    background-color: var(--green);
+    border-radius: 10px;
+    color: #fff;
+    padding: 6px 10px;
+}
+.custum_radio_contain{
+    align-items: center;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    display: flex;
+    height: 17px;
+    justify-content: center;
+    position: relative;
+    width: 17px;
+}
+.custum_radio_contain::after{
+    background: #a9a9a9;
+    border-radius: 50%;
+    content: "";
+    height: 7px;
+    position: absolute;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: .4s;
+    width: 7px;
+}
+.custum_radio_btn.checked .custum_radio_contain::after {
+    transform: scale(1);
+  }
+.notFoundContainer{
+background-image: url(../public/assets/imgs/bg3.jpg);
+background-size: cover;
+}
+.notFoundContainer + .postInstaContainer{
+    display: none;
+}
+/* !single blog post  */
+/* toggle darkMode */
+.darkMode .IconDark,
+.darkMode .IconLight{
+    fill: #ffb700;
+}
+.btnToggle{
+    transition: all .6s cubic-bezier(.68,-.55,.256,1.55);
+}
+.darkMode .btnToggle{
+    left: 50%;
+}
+.darkMode .section,
+.darkMode .bg-white,
+.darkMode .subSection
+{
+    background: var(--secondDarkColor);
+    color: white;
+}
+.darkMode .homepage .sidebarWrapp,
+.darkMode .sidebarWrapp,
+.darkMode .bg-lightGray
+{
+    background: var(--firstDarkColor);
+    color: white;
+}
+
+.darkMode .postInstagramList .bg-white{
+    background-color: white;
+}
+.darkMode .text-gray{
+color: white;
+}
+svg{
+    transition: all .3s;
+}
+.darkMode svg{
+    fill: white;
+}
+.darkMode .brandItem{
+    background: lightgrey;
+    border-radius: 4px;
+}
+.darkMode .selectBottom,
+.darkMode .selectReservation .selectTop,
+.darkMode input,
+.darkMode textarea{
+    background: var(--thirdDarkColor);
+    border-color:var(--firstDarkColor) ;
+    border-radius: 4px;
+    color: white;
+}
+.darkMode input::placeholder,
+.darkMode textarea::placeholder{
+    opacity: 0.8;
+    color: white;
+}
+.darkMode .nonHomepage .sidebarWrapp{
+        background-color: transparent !important;
+    }
+    .darkMode .nonHomepage .sidebar.menuOpened{
+        background-color: var(--firstDarkColor) !important;
+    }
+    .darkMode .react-calendar{
+        background-color: var(--thirdDarkColor) !important;
+    }
+    .darkMode .react-calendar__month-view__days__day--neighboringMonth{
+        color: white !important;
+        opacity: 0.5 !important;
+    }
+    .darkMode abbr:where([title]){
+        opacity: 1 !important;
+    }
+    .darkMode .react-calendar__navigation__arrow{
+        background-color: var(--secondDarkColor) !important;
+        color: white !important;
+    }
+    .darkMode .storageInfoItem{
+        border-bottom-color: var(--thirdDarkColor) ;
+    }
+    .darkMode .react-calendar__navigation button:hover{
+        background-color: var(--firstDarkColor) !important;
+    }
+/* !toggle darkMode */
+/* responsivity */
+@media (max-width:1023px) {
+    .header{
+        padding-left: 0;
+    }
+    .navItem,
+    .actions{
+        display: none !important;
+    }
+    
+    .headerWrapper{
+        padding-left: 0;
+        justify-content: center !important;
+    }
+    .sidebar{
+        height: max-content;
+    }
+    .sidebarWrapp{
+        padding-bottom: 30px;
+    }
+    .darkMode .nonHomepage .sidebar{
+        background-color: var(--firstDarkColor) !important;
+    }
+    .darkMode .nonHomepage .sidebarWrapp svg{
+        fill: white;
+    }
+    .banner{
+        padding-left: 0;
+    }
+    
+    .bannerDesc{
+        width: 100% !important;
+        font-size: 30px !important;
+    }
+    .videoControllerBtn{
+        width: 55px;
+        height: 55px;
+    }
+    .videoControllerIcon{
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    .videoText .text{
+        font-size: 14px !important;
+    }
+   .notHomePage svg{
+    fill: black ;
+}
+}
+.overflow-hidden::-webkit-scrollbar{
+    width: 0;
+}
+
+/* !responsivity */
