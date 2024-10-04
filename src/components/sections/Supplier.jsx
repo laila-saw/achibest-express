@@ -1,6 +1,7 @@
 import React from 'react'
 import ArrowLeft from '../icon svgs/ArrowLeft'
 import ReadMore from '../ui/ReadMore'
+import maping from "../../assets/imgs/maping.png"
 
 const Supplier = () => {
     return (
@@ -21,7 +22,7 @@ const Supplier = () => {
 
                 </div>
                 <div className="sectionRight lg:w-[calc(100%/5*4)] flex  lg:flex-row flex-col">
-                    <img src="../assets/imgs/maping.png" alt="" />
+                    <img src={maping} alt="" />
                 </div>
             </div>
         </div>

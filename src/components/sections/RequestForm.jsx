@@ -8,7 +8,7 @@ import AlertError from '../ui/AlertError';
 import PopupSuccess from '../ui/PopupSuccess';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
-
+import RightArrow from "../../assets/icons - svg/Noir/24 px/Achibest-icon-Right-Arrow.svg"
 const RequestForm = () => {
     const location=useLocation()
     const [selectedOption, SetSelectedOption] = useState("Select your request")
@@ -94,7 +94,7 @@ window.history.replaceState({}, document.title, sanitizedUrl);
         <div className="section py-[100px] ">
             <div className="sectionContainer px-6 sm:px-[30px]   md:px-[50px] xl:px-[100px] 2xl:px-[150px] flex  flex-col gap-[30px] ">
                 <div className="sectionTop text-left  flex flex-col lg:flex-row  justify-between items-center gap-[20px] ">
-                    <div className="sectionTitle flex flex-col items-start w-full lg:w-6/12 gap-1  ">ONLINE <br />REQUEST <span><img src="../assets/icons - svg/Noir/24 px/Achibest-icon-Right-Arrow.svg" alt="" className="w-10" /></span></div>
+                    <div className="sectionTitle flex flex-col items-start w-full lg:w-6/12 gap-1  ">ONLINE <br />REQUEST <span><img src={RightArrow}alt="" className="w-10" /></span></div>
                     <p className="text flex flex-col  lg:w-6/12 text-[18px] ">
                         Have any request? Please fill the following form! One of our
                         finest team members will immediately reach out to you!

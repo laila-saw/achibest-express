@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { findUsData } from '../../data/Data'
 import ArrowDown from '../arrow/ArrowDown'
-
+import contactImg from "../../assets/imgs/contact - img.png"
 
 const Findus = () => {
     const [dropDownOpened, SetDropDownOpened] = useState(false)
@@ -78,7 +78,7 @@ const Findus = () => {
                     </div>
                     <div className="right w-full lg:w-[calc(100%/3*2-30px)]">
                         <div className="imgContainer">
-                            <img src="../assets/imgs/contact - img.png" alt="" />
+                            <img src={contactImg} alt="" />
                         </div>
                     </div>
                 </div>

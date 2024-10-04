@@ -1,6 +1,7 @@
 import React from 'react'
 import { postInsta } from '../../data/Data'
 import { Link } from 'react-router-dom'
+import achibestLogo from "../../assets/logos/Achibest-Express-Logo.svg"
 const PostInstagram = () => {
   const PF=process.env.REACT_APP_PUBLIC_FOLDER
   return (
@@ -14,7 +15,7 @@ const PostInstagram = () => {
             </div>
             <span  className="brdr w-[calc(100%-40px)] h-[calc(100%-40px)] absolute border-[3px] border-[white] "></span>
             <div className="logo absolute h-[34px] flex items-center justify-center top-[6px] p-2 bg-white">
-            <img className='w-[95px] ' src={PF+"logos/Achibest-Express-Logo.svg"} alt="" />
+            <img className='w-[95px] ' src={achibestLogo} alt="" />
             </div>
         </Link>
         ))

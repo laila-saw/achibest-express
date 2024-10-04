@@ -1,5 +1,13 @@
 import React from 'react'
 import ArrowRight from '../icon svgs/ArrowRight'
+import brandImg1 from '../../assets/Brands/brand-17.png'
+import brandImg2 from '../../assets/Brands/brand-18.png'
+import brandImg3 from '../../assets/Brands/brand-19.png'
+import brandImg7 from '../../assets/Brands/brand-15.png'
+import brandImg4 from '../../assets/Brands/brand-06.png'
+import brandImg5 from '../../assets/Brands/brand-16.png'
+import brandImg6 from '../../assets/Brands/brand-07.png'
+
 
 const Brands = () => {
     return (
@@ -22,13 +30,13 @@ const Brands = () => {
                         <div className="boxTitle-2 mb-0  text-orange">our <br /> brands</div>
                         <div className="brandsList gap-5 flex flex-wrap items-center w-full lg:w-[75%] justify-around">
                             <div className="brandItem">
-                                <img className='w-[100px]' src="../assets/Brands/brand-17.png" alt="" />
+                                <img className='w-[100px]' src={brandImg1} alt="" />
                             </div>
                             <div className="brandItem">
-                                <img className='w-[100px]' src="../assets/Brands/brand-18.png" alt="" />
+                                <img className='w-[100px]' src={brandImg2} alt="" />
                             </div>
                             <div className="brandItem">
-                                <img className='w-[100px]' src="../assets/Brands/brand-19.png" alt="" />
+                                <img className='w-[100px]' src={brandImg3} alt="" />
                             </div>
                         </div>
 
@@ -37,16 +45,16 @@ const Brands = () => {
                         <div className="boxTitle-2 mb-0  text-orange">Partner's <br /> brands</div>
                         <div className="brandsList gap-5 flex flex-wrap  items-center w-full lg:w-[75%] justify-around">
                             <div className="brandItem">
-                                <img className='w-[100px] h-[62px] ' src="../assets/Brands/brand-15.png" alt="" />
+                                <img className='w-[100px] h-[62px] ' src={brandImg7} alt="" />
                             </div>
                             <div className="brandItem">
-                                <img className='w-[131px] h-[62px] ' src="../assets/Brands/brand-06.png" alt="" />
+                                <img className='w-[131px] h-[62px] ' src={brandImg4}alt="" />
                             </div>
                             <div className="brandItem">
-                                <img className='w-[100px] h-[62px] ' src="../assets/Brands/brand-16.png" alt="" />
+                                <img className='w-[100px] h-[62px] ' src={brandImg5} alt="" />
                             </div>
                             <div className="brandItem">
-                                <img className='w-[100px] h-[62px] ' src="../assets/Brands/brand-07.png" alt="" />
+                                <img className='w-[100px] h-[62px] ' src={brandImg6} alt="" />
                             </div>
                         </div>
 

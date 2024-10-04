@@ -1,14 +1,15 @@
 import React from 'react'
 import ButtonDownload from './ButtonDownload'
+import catalogue from "../../assets/CATALOGUE-FINAL-GLOBAL-WEB.pdf"
+import downloadIcon from "../../assets/icons - svg/Download_Cata_-_Achibest_icon.svg"
 
 const DownloadCatalogue = () => {
-  const PF=process.env.REACT_APP_PUBLIC_FOLDER
   return (
     <ButtonDownload 
-                btnIcon={PF+"icons - svg/Download_Cata_-_Achibest_icon.svg"}
+                btnIcon={downloadIcon}
                 btnContent={"see our catalog"}
                 rounded="rounded-3xl capitalize"
-                link={"../assets/CATALOGUE-FINAL-GLOBAL-WEB.pdf"}
+                link={catalogue}
                 />
   )
 }

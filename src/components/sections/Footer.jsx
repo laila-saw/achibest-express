@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { footerComposant, menu } from '../../data/Data'
+import React from 'react'
+import { footerComposant } from '../../data/Data'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -50,10 +50,10 @@ const Footer = () => {
                     <Link to={'/'} className='transition-all hover:text-orange hover:opacity-100 opacity-60 text-sm'>Term and Cnditions</Link>
                 </div>
                 <div className="text-center opacity-60 text-sm w-full lg:w[calc(100%/3)]">
-                    Created By <a href="https://codingart.io" target="_blank" rel="noopener noreferrer"><strong>Coding Art.</strong></a>
+                    Created By <a href="https://laila-saw.github.io/personel_portfolio/" target="_blank" rel="noopener noreferrer"><strong>Laila Ouhamou.</strong></a>
                 </div>
                 <div className='text-center lg:text-right w-full lg:w[calc(100%/3)] opacity-60 text-sm'>
-                    Copyright © 2022 ACHIBEST FOOD.
+                    Copyright © {new Date()?.getFullYear()} ACHIBEST FOOD.
                     All Rights Reserved
                 </div>
             </div>

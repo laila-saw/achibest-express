@@ -4,7 +4,7 @@ import { icons } from '../data/Data'
 import MenuIcon from './MenuSvg/MenuIcon'
 import { useContext } from 'react'
 import { ThemeContext } from '../context'
-
+import iconClose from "../assets/icons - svg/Verte/24 px/Achibest-icon-Close.svg"
 const Sidebar = ({isHomePage}) => {
   const PF=process.env.REACT_APP_PUBLIC_FOLDER
   const [menuOpened, setMenuOpened] = useState(false)
@@ -33,7 +33,7 @@ const Sidebar = ({isHomePage}) => {
           }>
             {
               menuOpened
-                ? <img className="w-10 h-10 " src={PF+"icons - svg/Verte/24 px/Achibest-icon-Close.svg"} alt="" />
+                ? <img className="w-10 h-10 " src={iconClose} alt="" />
                 : <MenuIcon  />
             }
           </div>

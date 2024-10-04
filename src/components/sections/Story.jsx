@@ -1,4 +1,5 @@
 import React from 'react'
+import strorBackground from "../../assets/imgs/Achibest Stor - background.png"
 
 const Story = () => {
    const dates =[
@@ -20,7 +21,7 @@ const Story = () => {
                     <div className=" sectionLeft hidden  lg:flex flex-col lg:w-[calc(100%/2-32px)] ">
                         
                         <div className="imgContainer">
-                            <img src="../assets/imgs/Achibest Stor - background.png" alt="" />
+                            <img src={strorBackground} alt="" />
                         </div>
 
                     </div>
@@ -28,7 +29,7 @@ const Story = () => {
                         <div className="desc lg:mt-[200px] ">
                             <p>The Achibest food express is a family-run business, established in 1936. We are passionate about providing high-quality food-related products with our customer's needs in mind. We strive to satisfy our customers in all aspects of their lives by providing quality food and services.</p>
                             <div className="lg:hidden imgContainer mt-5">
-                            <img src="../assets/imgs/Achibest Stor - background.png" alt="" />
+                            <img src={strorBackground} alt="" />
                             </div>
                             <p className='my-5'>We take pride in our reputation as a reliable and trustworthy supplier who delivers items directly to your door. Our strong passion for food, combined with extensive knowledge of food processing, means that our products stand out from the crowd.</p>
                             <p>With over eight (8) decades of expertise, we keep providing superior quality products and excellent service. Welcome to the Achibest food express! Here we believe that food is the most important element in people's lives, and we are committed to bringing you the best.</p>

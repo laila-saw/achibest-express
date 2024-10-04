@@ -3,6 +3,7 @@ import {menu} from "../../data/Data"
 import { Link } from 'react-router-dom'
 import DownloadCatalogue from '../ui/DownloadCatalogue'
 import ToggleDarkMode from '../ui/ToggleDarkMode'
+import AchibestLogo from '../../assets/logos/Achibest-Express-Logo.svg'
 
 const Header = () => {
     const PF=process.env.REACT_APP_PUBLIC_FOLDER
@@ -10,7 +11,7 @@ const Header = () => {
   return (
     <header className='header flex items-center justify-center z-10'>
         <div className="headerWrapper flex items-center justify-between">
-            <div className="logo"><img className='w-[169px] xl:w-[179px]'  src={PF+"../assets/logos/Achibest-Express-Logo.svg"} alt="" /></div>
+            <div className="logo"><img className='w-[169px] xl:w-[179px]'  src={AchibestLogo} alt="" /></div>
             <ul className="nav">
             {menu.map((item,i)=>(
                 <li 

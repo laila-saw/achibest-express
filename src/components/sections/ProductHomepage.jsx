@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSearchParams } from 'react-router-dom'
 import { productHomepage } from '../../data/Data'
 import ArrowRight from '../icon svgs/ArrowRight'
 import ReadMore from '../ui/ReadMore'

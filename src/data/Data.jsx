@@ -7,7 +7,41 @@ import Icon5 from "../components/realisationSvgs/Icon5";
 import Facebook from "../components/socialMediaIcons/Facebook";
 import Instagram from "../components/socialMediaIcons/Instgram";
 import Linkedin from "../components/socialMediaIcons/Linkedin";
-const PF=process.env.REACT_APP_PUBLIC_FOLDER
+import strageyIcon1 from "../assets/icons - svg/Blanc/24 px/icon-12.svg";
+import strageyIcon2 from "../assets/icons - svg/Blanc/24 px/icon-13.svg";
+import strageyIcon3 from "../assets/icons - svg/Blanc/24 px/icon-14.svg";
+
+import productImg1 from "../assets/imgs/p1.png";
+import productImg2 from "../assets/imgs/p2.png";
+import productImg3 from "../assets/imgs/p3.png";
+
+import postInstaImg1 from "../assets/imgs/SEAFOOD.png";
+import postInstaImg2 from "../assets/imgs/DAIRY.png";
+import postInstaImg3 from "../assets/imgs/MEAT & POULTRY.png";
+import postInstaImg4 from "../assets/imgs/img03.png";
+
+import categoryImg1 from "../assets/imgs/img06.png";
+import categoryImg2 from "../assets/imgs/img07.png";
+import categoryImg3 from "../assets/imgs/img08.png";
+import categoryImg4 from "../assets/imgs/img09.png";
+import categoryImg5 from "../assets/imgs/img10.png";
+import categoryImg6 from "../assets/imgs/img11.png";
+import categoryImg7 from "../assets/imgs/img12.png";
+
+import productImg4 from "../assets/imgs/product01.png";
+import productImg5 from "../assets/imgs/product02.png";
+import productImg6 from "../assets/imgs/product03.png";
+import productImg7 from "../assets/imgs/product04.png";
+import productImg8 from "../assets/imgs/product05.png";
+import productImg9 from "../assets/imgs/product06.png";
+
+import realisationsImg1 from "../assets/imgs/img03.png";
+import realisationsImg2 from "../assets/imgs/img01.png";
+import realisationsImg3 from "../assets/imgs/img13.png";
+import realisationsImg4 from "../assets/imgs/img02.png";
+import realisationsImg5 from "../assets/imgs/img04.png";
+
+
 
 export const menu = [
     {
@@ -26,10 +60,10 @@ export const menu = [
         title: "contact",
         path: "./contact"
     },
-    {
-        title: "blog",
-        path: "./blog"
-    },
+    // {
+    //     title: "blog",
+    //     path: "./blog"
+    // },
 
 ]
 export const icons = [
@@ -100,7 +134,7 @@ export const realisations = [
     {
         icon: <Icon1/>,
         number: "9000+",
-        img: "../assets/imgs/img03.png",
+        img: realisationsImg1,
         desc:
             <p className="desc">
                 PALETS STORAGE FOR
@@ -113,7 +147,7 @@ export const realisations = [
     {
         icon: <Icon2/>,
         number: "120",
-        img: "../assets/imgs/img01.png",
+        img: realisationsImg2,
         desc:
             <p className="desc">
                 EMPLOYEES COMPOSING OUR MOTIVATED,
@@ -125,7 +159,7 @@ export const realisations = [
     {
         icon: <Icon3/>,
         number: "5000+",
-        img: "../assets/imgs/img13.png",
+        img: realisationsImg3,
         desc:
             <p className="desc">
                 PRODUCTS COVERING
@@ -137,7 +171,7 @@ export const realisations = [
     {
         icon: <Icon4/>,
         number: "1500+",
-        img: "../assets/imgs/img02.png",
+        img: realisationsImg4,
         desc:
             <p className="desc">
                 CUSTOMERS FROM
@@ -150,7 +184,7 @@ export const realisations = [
     {
         icon: <Icon5/>,
         number: "25",
-        img: "../assets/imgs/img04.png",
+        img: realisationsImg5,
         desc:
             <p className="desc">
                 TRANSPORTATION
@@ -163,7 +197,7 @@ export const realisations = [
 ]
 export const strategySteps = [
     {
-        icon:  <img src="../assets/icons - svg/Blanc/24 px/icon-12.svg" alt="" className="p-5 w-full h-[167px] strategyImg" />,
+        icon:  <img src={strageyIcon1} alt="" className="p-5 w-full h-[167px] strategyImg" />,
         title: "cash & carry",
         desc: <p className="desc">
             6 Stores offering Large
@@ -174,7 +208,7 @@ export const strategySteps = [
         </p>,
     },
     {
-        icon:  <img src="../assets/icons - svg/Blanc/24 px/icon-13.svg" alt="" className="p-5 w-full h-[223px] strategyImg" />,
+        icon:  <img src={strageyIcon2} alt="" className="p-5 w-full h-[223px] strategyImg" />,
         title: "direct distribution",
         desc: <p className="desc">
             Very Large choice of
@@ -184,7 +218,7 @@ export const strategySteps = [
         </p>,
     },
     {
-        icon:  <img src="../assets/icons - svg/Blanc/24 px/icon-14.svg" alt="" className="p-5 w-full h-[223px] strategyImg" />,
+        icon:  <img src={strageyIcon3} alt="" className="p-5 w-full h-[223px] strategyImg" />,
         title: "indirect distribution",
         desc: <p className="desc">
             Very Large choice of
@@ -195,47 +229,47 @@ export const strategySteps = [
 ]
 export const postInsta = [
     {
-        img: PF+"imgs/SEAFOOD.png",
+        img: postInstaImg1,
         path: "/"
     },
     {
-        img: PF+"imgs/DAIRY.png",
+        img: postInstaImg2,
         path: "/"
     },
     {
-        img: PF+"imgs/MEAT & POULTRY.png",
+        img: postInstaImg3,
         path: "/"
     },
     {
-        img: PF+"imgs/img03.png",
+        img: postInstaImg4,
         path: "/"
     },
     {
-        img: PF+"imgs/DAIRY.png",
+        img: postInstaImg2,
         path: "/"
     },
 ]
 export const productHomepage = [
     {
         title: "DAIRY",
-        img: "../assets/imgs/p1.png",
+        img: productImg1,
         link: "Cheese"
     },
     {
         title: "MEAT & POULTRY",
-        img: "../assets/imgs/p2.png",
+        img: productImg2,
         link: "Meat & Poultry"
     },
     {
         title: "SEAFOOD",
-        img: "../assets/imgs/p3.png",
+        img: productImg3,
         link: "Seafood"
     },
 ]
 export const products = [
     {
         title: "Topping Chocolat",
-        img: "../assets/imgs/product01.png",
+        img: productImg4,
         link: "./productList/:productId",
         brand:"Gourmés",
         price:"$5.99",
@@ -243,7 +277,7 @@ export const products = [
     },
     {
         title: "Jackfruit, BBQ",
-        img: "../assets/imgs/product02.png",
+        img: productImg5,
         link: "./productList/:productId",
         brand:"Jackfruit",
         price:"$5.99",
@@ -251,7 +285,7 @@ export const products = [
     },
     {
         title: "Topping Rraise",
-        img: "../assets/imgs/product03.png",
+        img: productImg6,
         link: "./productList/:productId",
         brand:"Gourmés",
         price:"$5.99",
@@ -259,7 +293,7 @@ export const products = [
     },
     {
         title: "Plant-Based Protein Shake,...",
-        img: "../assets/imgs/product04.png",
+        img: productImg7,
         link: "./productList/:productId",
         brand:"Koia",
         price:"$5.99",
@@ -267,7 +301,7 @@ export const products = [
     },
     {
         title: "Sauce PITA",
-        img: "../assets/imgs/product05.png",
+        img: productImg8,
         link: "./productList/:productId",
         brand:"Gourmés",
         price:"$5.99",
@@ -275,7 +309,7 @@ export const products = [
     },
     {
         title: "Balanced Breaks",
-        img: "../assets/imgs/product06.png",
+        img: productImg9,
         link: "./productList/:productId",
         brand:"Sargento",
         price:"$5.99",
@@ -283,7 +317,7 @@ export const products = [
     },
     {
         title: " 2 Topping Chocolat",
-        img: "../assets/imgs/product01.png",
+        img: productImg4,
         link: "./productList/:productId",
         brand:"Gourmés",
         price:"$5.99",
@@ -291,7 +325,7 @@ export const products = [
     },
     {
         title: " 2 Jackfruit, BBQ",
-        img: "../assets/imgs/product02.png",
+        img: productImg5,
         link: "./productList/:productId",
         brand:"Jackfruit",
         price:"$5.99",
@@ -299,7 +333,7 @@ export const products = [
     },
     {
         title: " 2 Topping Rraise",
-        img: "../assets/imgs/product03.png",
+        img: productImg6,
         link: "./productList/:productId",
         brand:"Gourmés",
         price:"$5.99",
@@ -307,7 +341,7 @@ export const products = [
     },
     {
         title: " 2 Plant-Based Protein Shake,...",
-        img: "../assets/imgs/product04.png",
+        img: productImg7,
         link: "./productList/:productId",
         brand:"Koia",
         price:"$5.99",
@@ -315,7 +349,7 @@ export const products = [
     },
     {
         title: " 2 Sauce PITA",
-        img: "../assets/imgs/product05.png",
+        img: productImg8,
         link: "./productList/:productId",
         brand:"Gourmés",
         price:"$5.99",
@@ -323,7 +357,7 @@ export const products = [
     },
     {
         title: " 2 Balanced Breaks",
-        img: "../assets/imgs/product06.png",
+        img: productImg9,
         link: "./productList/:productId",
         brand:"Sargento",
         price:"$5.99",
@@ -332,31 +366,31 @@ export const products = [
 ]
 export const categories=[
     {
-        img:"../assets/imgs/img06.png",
+        img:categoryImg1,
         title:"Cheese",
     },
     {
-        img:"../assets/imgs/img07.png",
+        img:categoryImg2,
         title:"Dairy",
     },
     {
-        img:"../assets/imgs/img08.png",
+        img:categoryImg3,
         title:"Berries & Vegetables",
     },
     {
-        img:"../assets/imgs/img09.png",
+        img:categoryImg4,
         title:"Plant-based",
     },
     {
-        img:"../assets/imgs/img10.png",
+        img:categoryImg5,
         title:"Meat & Poultry",
     },
     {
-        img:"../assets/imgs/img11.png",
+        img:categoryImg6,
         title:"Seafood",
     },
     {
-        img:"../assets/imgs/img12.png",
+        img:categoryImg7,
         title:"Beverages",
     },
 ]
@@ -600,5 +634,13 @@ export const reservationFields=[
         onChange:"",
         inputType:"text",
         placeholder:"Your zip code",
+    }
+]
+export const blogPostsData=[
+    {
+        title:{rendered:"Bonjour"},
+        excerpt:{rendered:"test"},
+        content:{rendered:"test"},
+        img:{rendered:"kkk"},
     }
 ]

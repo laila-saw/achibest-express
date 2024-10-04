@@ -4,6 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import ArrowLeft from '../icon svgs/ArrowLeft';
 import ArrowRight from '../icon svgs/ArrowRight';
+import leftArrow from "../../assets/icons - svg/Blanc/24 px/Achibest-icon-Left-Arrow.svg"
+import rightArrow from "../../assets/icons - svg/Blanc/24 px/Achibest-icon-Right-Arrow.svg"
 
 const Strategy = ({RightStart}) => {
     
@@ -46,8 +48,8 @@ const Strategy = ({RightStart}) => {
                         }
                 </Carousel>
                 <div className="flex mt-5 justify-center items-center gap-5">
-                <img className='bg-verte cursor-pointer flex items-center justify-center p-2 w-[50px] h-[50px]' src="../assets/icons - svg/Blanc/24 px/Achibest-icon-Left-Arrow.svg" alt="" />
-                <img className='bg-verte cursor-pointer flex items-center justify-center p-2 w-[50px] h-[50px]' src="../assets/icons - svg/Blanc/24 px/Achibest-icon-Right-Arrow.svg" alt="" />
+                <img className='bg-verte cursor-pointer flex items-center justify-center p-2 w-[50px] h-[50px]' src={leftArrow} alt="" />
+                <img className='bg-verte cursor-pointer flex items-center justify-center p-2 w-[50px] h-[50px]' src={rightArrow} alt="" />
                 </div>
                </div>
                <div className="hidden sm:flex lg:w-[calc(100%/5*4)]">

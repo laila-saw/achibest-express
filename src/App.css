@@ -573,7 +573,7 @@ opacity: 0 !important;
     transform: scale(1);
   }
 .notFoundContainer{
-background-image: url(../public/assets/imgs/bg3.jpg);
+background-image: url(./assets/imgs/bg3.jpg);
 background-size: cover;
 }
 .notFoundContainer + .postInstaContainer{
@@ -715,6 +715,7 @@ svg{
 }
 .overflow-hidden::-webkit-scrollbar{
     width: 0;
+    height: 0;
 }
 
 /* !responsivity */

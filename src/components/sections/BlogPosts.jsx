@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import ArrowRight from '../icon svgs/ArrowRight';
 import SearchForm from '../ui/SearchForm';
-import { data } from 'autoprefixer';
+import { blogPostsData } from '../../data/Data';
 
 const BlogPosts = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -15,31 +15,12 @@ const BlogPosts = () => {
     
     const [currentCategory, setCurrentCategory] = useState(-1);
     const [currentPage, setCurrentPage] = useState(1);
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(blogPostsData);
     const [isLoading, setIsLoading] = useState(false);
     const [suggestedPosts, setSuggestedPosts] = useState([]);
     
   const [noResults,setNoResult]=useState(false)
-    const baseUrl=process.env.REACT_APP_BASE_URL;
-//     useEffect(() => {
-//          const fetchPosts= async ()=> {
-//             try {
-//              const response = await axios.get(baseUrl+'/posts');
-//              if(categoryfromurl!==null){
-//                 const wpCategory = await axios.get(baseUrl+'/categories?slug='+categoryfromurl);
-//              setCurrentCategory(wpCategory.data[0].id)
-//              }
-//              const wpPosts = response.data;
-//             setPosts(wpPosts);
-//             setIsLoading(true) 
-//             } catch (error) {
-//                 console.log(error)
-//             }
-            
-//         }
-    
-//         fetchPosts();
-//    }, [])
+   
   const postsPerPage = 6;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -53,7 +34,6 @@ const BlogPosts = () => {
     "content",
 ]
 useEffect(() => {
-    console.log("ouhamou")
     setSuggestedPosts(posts.filter(
         (post) =>
             keys.some(key =>
@@ -62,7 +42,7 @@ useEffect(() => {
     if (searchQuery === null) {
         setSuggestedPosts([])
     }
-}, [searchQuery,isLoading])
+}, [searchQuery])
   function showItems() {
     for (let i = 0; i < posts.length; i++) {
         for (let j = 0; j < posts[i].categories.length; j++) {
