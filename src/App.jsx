@@ -30,16 +30,16 @@ function App() {
     <div className={darkeMode ?  "darkMode" : "lightMode" }> 
     <ScrollToTop />
     <Header />
-    <Sidebar isHomePage={locationPathName==="/" ? true : false} />
+    <Sidebar isHomePage={locationPathName==="/achibest-express/" ? true : false} />
       <Routes>
-        <Route exact path="/" element={<HomePgae/>} />
-        <Route  path="/about" element={<About/>} />
-        <Route  path="/products" element={<Products/>} />
-        <Route  path="/contact" element={<Contact/>} />
-        <Route  path="/blog" element={<Blog/>} />
-        <Route  path="/posts/:postname" element={<SinglePost/>} />
-        <Route  path="/request" element={<Request/>} />
-        <Route  path="/storage" element={<Storage/>} />
+        <Route exact path="/achibest-express/" element={<HomePgae/>} />
+        <Route  path="/achibest-express/about" element={<About/>} />
+        <Route  path="/achibest-express/products" element={<Products/>} />
+        <Route  path="/achibest-express/contact" element={<Contact/>} />
+        <Route  path="/achibest-express/blog" element={<Blog/>} />
+        <Route  path="/achibest-express/posts/:postname" element={<SinglePost/>} />
+        <Route  path="/achibest-express/request" element={<Request/>} />
+        <Route  path="/achibest-express/storage" element={<Storage/>} />
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
       <PostInstagram/>
